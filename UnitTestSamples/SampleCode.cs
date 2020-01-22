@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace UnitTestSamples
 {
@@ -44,6 +45,19 @@ namespace UnitTestSamples
             }
 
             return reverseSentence.ToString();
+        }
+
+        public static async Task<bool> Example1()
+        {
+
+            return await Task.FromResult(false);
+        }
+
+        public static async Task<bool> Example2()
+        {
+    
+            throw new Exception("Bah");
+            return await Task.FromResult(true);
         }
     }
 }
